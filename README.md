@@ -1,6 +1,6 @@
 # Student Mental Health Platform
 
-🌟 **Live Demo:** [https://student-mental-health-platform.netlify.app](https://student-mental-health-platform.netlify.app)
+🌟 **Live Demo:** [https://indrameghana.github.io/Student-Mentel-Health](https://indrameghana.github.io/Student-Mentel-Health)
 
 A comprehensive React-based mental health support platform for students with advanced features.
 
@@ -89,7 +89,7 @@ src/
 
 ## 🌐 Live Deployment
 
-**Website:** [https://student-mental-health-platform.netlify.app](https://student-mental-health-platform.netlify.app)
+**Website:** [https://indrameghana.github.io/Student-Mentel-Health](https://indrameghana.github.io/Student-Mentel-Health)
 
 **Repository:** [https://github.com/indrameghana/Student-Mentel-Health](https://github.com/indrameghana/Student-Mentel-Health)
 
