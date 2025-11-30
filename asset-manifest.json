@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Student-Mentel-Health/static/css/main.23754e09.css",
+    "main.js": "/Student-Mentel-Health/static/js/main.48e15227.js",
+    "index.html": "/Student-Mentel-Health/index.html",
+    "main.23754e09.css.map": "/Student-Mentel-Health/static/css/main.23754e09.css.map",
+    "main.48e15227.js.map": "/Student-Mentel-Health/static/js/main.48e15227.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23754e09.css",
+    "static/js/main.48e15227.js"
+  ]
+}
