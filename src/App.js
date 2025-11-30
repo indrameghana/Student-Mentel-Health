@@ -10,6 +10,11 @@ import Login from './pages/Login';
 import Admin from './pages/Admin';
 import Entertainment from './pages/Entertainment';
 import Games from './pages/Games';
+import Assessment from './pages/Assessment';
+import Analytics from './pages/Analytics';
+import Payment from './pages/Payment';
+import Chat from './pages/Chat';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -25,6 +30,11 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/entertainment" element={<Entertainment />} />
             <Route path="/games" element={<Games />} />
+            <Route path="/assessment" element={<Assessment />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/admin" element={<Admin />} />
           </Routes>
         </main>

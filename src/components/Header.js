@@ -19,6 +19,9 @@ const Header = () => {
           <li><Link to="/support-groups" className={location.pathname === '/support-groups' ? 'active' : ''}>Support Groups</Link></li>
           <li><Link to="/entertainment" className={location.pathname === '/entertainment' ? 'active' : ''}>Entertainment</Link></li>
           <li><Link to="/games" className={location.pathname === '/games' ? 'active' : ''}>Games</Link></li>
+          <li><Link to="/assessment" className={location.pathname === '/assessment' ? 'active' : ''}>Assessment</Link></li>
+          <li><Link to="/analytics" className={location.pathname === '/analytics' ? 'active' : ''}>Analytics</Link></li>
+          <li><Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</Link></li>
           <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Login</Link></li>
         </ul>
         <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>

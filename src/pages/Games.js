@@ -52,6 +52,50 @@ const TicTacToe = () => {
   );
 };
 
+const ExerciseTimer = ({ exercise, duration }) => {
+  const [timeLeft, setTimeLeft] = useState(0);
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    let interval = null;
+    if (isActive && timeLeft > 0) {
+      interval = setInterval(() => {
+        setTimeLeft(timeLeft => timeLeft - 1);
+      }, 1000);
+    } else if (timeLeft === 0 && isActive) {
+      setIsActive(false);
+      alert('Exercise complete! Great job! 🎉');
+    }
+    return () => clearInterval(interval);
+  }, [isActive, timeLeft]);
+
+  const startTimer = () => {
+    setTimeLeft(duration);
+    setIsActive(true);
+  };
+
+  const stopTimer = () => {
+    setIsActive(false);
+    setTimeLeft(0);
+  };
+
+  return (
+    <div className="exercise-timer">
+      <div className="timer-display">
+        {timeLeft > 0 ? `${timeLeft}s` : 'Ready'}
+      </div>
+      <div className="timer-controls">
+        <button onClick={startTimer} className="btn btn-primary" disabled={isActive}>
+          Start
+        </button>
+        <button onClick={stopTimer} className="btn btn-secondary">
+          Stop
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const Games = () => {
   const [memoryCards, setMemoryCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
@@ -210,6 +254,46 @@ const Games = () => {
               <h3>⭕ Tic Tac Toe</h3>
               <p>Classic game to relax and have fun</p>
               <TicTacToe />
+            </div>
+
+            {/* Physical Exercises */}
+            <div className="game-card">
+              <h3>🏃 Quick Exercises</h3>
+              <p>Simple physical activities to boost energy and mood</p>
+              <div className="exercise-list">
+                <div className="exercise-item" onClick={() => alert('Do 10 jumping jacks! 🤸‍♀️')}>
+                  🤸‍♀️ Jumping Jacks (30 sec)
+                </div>
+                <div className="exercise-item" onClick={() => alert('Stretch your arms up high! 🙆‍♂️')}>
+                  🙆‍♂️ Arm Stretches (1 min)
+                </div>
+                <div className="exercise-item" onClick={() => alert('Take 10 deep breaths while walking! 🚶‍♀️')}>
+                  🚶‍♀️ Walking Meditation (2 min)
+                </div>
+                <div className="exercise-item" onClick={() => alert('Roll your shoulders 10 times! 💆‍♂️')}>
+                  💆‍♂️ Shoulder Rolls (30 sec)
+                </div>
+              </div>
+            </div>
+
+            {/* Desk Exercises */}
+            <div className="game-card">
+              <h3>💺 Desk Exercises</h3>
+              <p>Perfect for study breaks and stress relief</p>
+              <div className="exercise-list">
+                <div className="exercise-item" onClick={() => alert('Rotate your neck gently left and right! 🔄')}>
+                  🔄 Neck Rotations
+                </div>
+                <div className="exercise-item" onClick={() => alert('Stretch your wrists and fingers! ✋')}>
+                  ✋ Wrist Stretches
+                </div>
+                <div className="exercise-item" onClick={() => alert('Sit up straight and hold for 30 seconds! 🪑')}>
+                  🪑 Posture Hold
+                </div>
+                <div className="exercise-item" onClick={() => alert('Lift your legs under the desk! 🦵')}>
+                  🦵 Leg Lifts
+                </div>
+              </div>
             </div>
 
             {/* Mood Tracker */}
